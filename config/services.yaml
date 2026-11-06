@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Hschottm\ContaoEventsPlus\EventListener\:
+        resource: '../src/EventListener/'
+
+    Hschottm\ContaoEventsPlus\Geocoding\GoogleGeocoder: ~

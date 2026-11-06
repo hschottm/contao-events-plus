@@ -1,0 +1,50 @@
+{
+    "name": "hschottm/contao-events-plus",
+    "type": "contao-bundle",
+    "description": "Additional calendar event fields and optional Google Maps geocoding for Contao 5.3.",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Helmut Schottmüller",
+            "homepage": "https://github.com/hschottm"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "contao/core-bundle": "^5.3",
+        "contao/calendar-bundle": "^5.3",
+        "doctrine/dbal": "^3.8 || ^4.0",
+        "symfony/http-client": "^6.4 || ^7.0"
+    },
+    "require-dev": {
+        "contao/manager-bundle": "5.3.*",
+        "contao/manager-plugin": "^2.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "conflict": {
+        "heimrichhannot/contao-events-bundle": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hschottm\\ContaoEventsPlus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hschottm\\ContaoEventsPlus\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Hschottm\\ContaoEventsPlus\\ContaoManager\\Plugin"
+    },
+    "support": {
+        "issues": "https://github.com/hschottm/contao-events-plus/issues",
+        "source": "https://github.com/hschottm/contao-events-plus"
+    },
+    "scripts": {
+        "test": [
+            "@php vendor/bin/phpunit",
+            "@php tests/smoke.php"
+        ]
+    }
+}

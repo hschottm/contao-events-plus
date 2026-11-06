@@ -1,0 +1,15 @@
+Contao Events Plus
+Copyright (c) 2026 Helmut Schottmüller
+
+This project contains event field definitions and translations derived from:
+heimrichhannot/contao-events-bundle
+https://github.com/heimrichhannot/contao-events-bundle
+Copyright (c) Heimrich & Hannot GmbH and contributors
+Licensed under LGPL-3.0-or-later.
+
+The extraction was based on the hschottm fork, branch contao53, commit
+bab68e3cfef9e60fcc538cf50eab43e34a563022, with subsequent translation additions.
+Original notices are retained in the derived source files.
+
+This project is distributed under the GNU Lesser General Public License,
+version 3 or (at your option) any later version.
