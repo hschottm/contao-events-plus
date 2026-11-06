@@ -15,4 +15,4 @@ jobs:
           coverage: none
       - run: composer --no-plugins validate --strict
       - run: composer update --no-interaction --no-plugins --no-scripts
-      - run: composer test
+      - run: composer --no-plugins test

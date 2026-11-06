@@ -105,7 +105,7 @@ using those features need an alternative before migrating.
 
 ```bash
 composer update --no-plugins --no-scripts
-composer test
+composer --no-plugins test
 ```
 
 PHPUnit covers the geocoding client, opt-in/key prerequisites, preserved coordinates,
