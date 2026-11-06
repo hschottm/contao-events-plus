@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here.
 
+## [1.0.1] - 2026-11-06
+
+### Changed
+
+- Use a version-neutral introduction in the README while retaining the explicit compatibility requirements.
+
+### Added
+
+- Complete labels, help texts, Google Maps settings and backend messages for Czech, Spanish, Persian, French, Italian, Japanese, Dutch, Polish, Russian, Slovak, Slovenian, Serbian, Swedish and Turkish.
+- Together with English and German, cover all 16 backend language packages shipped with Contao 5.3.
+- Translation completeness and UTF-8 checks without fallback, plus kernel smoke coverage for every bundled language.
+
 ## [1.0.0] - 2026-11-06
 
 Initial release for **Contao 5.3** (PHP 8.2+).
@@ -25,3 +37,5 @@ Initial release for **Contao 5.3** (PHP 8.2+).
 - The legacy negative setting `skipCalendarEventCoordinateRetrieval` is replaced by explicit opt-in; automatic retrieval is not enabled during migration.
 
 [1.0.0]: https://github.com/hschottm/contao-events-plus/releases/tag/1.0.0
+
+[1.0.1]: https://github.com/hschottm/contao-events-plus/releases/tag/1.0.1

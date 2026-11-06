@@ -85,7 +85,8 @@ check(false === Config::get('eventsPlusEnableAutomaticCoordinates'), 'Removing t
 check(is_file($project.'/system/config/localconfig.php'), 'Missing persisted settings');
 
 
-foreach (['en', 'de'] as $language) {
+foreach (glob(dirname(__DIR__).'/contao/languages/*', GLOB_ONLYDIR) as $languageDirectory) {
+    $language = basename($languageDirectory);
     System::loadLanguageFile('default', $language, true);
     System::loadLanguageFile('tl_calendar_events', $language, true);
     System::loadLanguageFile('tl_settings', $language, true);
@@ -97,5 +98,5 @@ foreach (['en', 'de'] as $language) {
         check(!empty($GLOBALS['TL_LANG']['tl_settings'][$field][0]), "Missing $language settings label for $field");
     }
 }
-echo "All fields, four source palettes, callbacks, opt-in settings and EN/DE translations verified.\n";
+echo "All fields, four source palettes, callbacks, opt-in settings and all bundled translations verified.\n";
 $kernel->shutdown();

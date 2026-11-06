@@ -1,6 +1,6 @@
 # Contao Events Plus
 
-Additional calendar event fields and optional Google Maps coordinate retrieval for **Contao 5.3**.
+Additional calendar event fields and optional Google Maps coordinate retrieval for **Contao**.
 
 This focused successor extracts the event-field functionality from
 [heimrichhannot/contao-events-bundle](https://github.com/heimrichhannot/contao-events-bundle).
@@ -47,7 +47,13 @@ original field names and SQL definitions for existing project data:
 
 Editable fields appear in all four standard event source palettes (default,
 internal page, article and external URL). `dateAdded` is managed automatically.
-English and German labels and help texts are included. Your project can use these
+Labels, help texts and backend messages are included for all 16 languages shipped
+with Contao 5.3: Czech (`cs`), German (`de`), English (`en`), Spanish (`es`),
+Persian (`fa`), French (`fr`), Italian (`it`), Japanese (`ja`), Dutch (`nl`),
+Polish (`pl`), Russian (`ru`), Slovak (`sk`), Slovenian (`sl`), Serbian (`sr`),
+Swedish (`sv`) and Turkish (`tr`). This follows the
+[backend language packages distributed with Contao](https://github.com/contao/contao/tree/5.3/core-bundle/contao/languages),
+not every translation project available on Transifex. Your project can use these
 fields through Contao's event models and its own templates.
 
 ## Google Maps API settings
@@ -112,7 +118,8 @@ PHPUnit covers the geocoding client, opt-in/key prerequisites, preserved coordin
 saved-address retrieval and timestamps. An isolated Contao 5.3 kernel smoke test
 checks fields, palettes, callback registration and translations without touching
 an application database. GitHub Actions runs the checks on PHP 8.2 and 8.3.
-Tests use mocked HTTP responses and do not send real Google requests.
+Translation checks verify complete, non-empty UTF-8 texts in every supported locale
+without relying on English fallback. Tests use mocked HTTP responses and do not send real Google requests.
 
 ## License and credits
 
